@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #101820;
+  color: #f4f4f4;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #161b22;
+  padding: 1em 2em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #36f9a6;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #f4f4f4;
+  text-decoration: none;
+  margin-left: 2em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #36f9a6;
+}
+
+.hero {
+  text-align: center;
+  padding: 7em 2em 5em;
+  background: linear-gradient(135deg,#36f9a6 0%,#1c2331 100%);
+}
+
+.hero h1 {
+  font-size: 2.6em;
+  margin-bottom: 0.4em;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 1.5em;
+  color: #101820;
+}
+
+.cta-btn {
+  background: #161b22;
+  color: #36f9a6;
+  padding: 0.8em 2em;
+  font-size: 1.1em;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.cta-btn:hover {
+  background: #36f9a6;
+  color: #161b22;
+}
+
+section {
+  padding: 4em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.services h2, .about h2, .contact h2 {
+  font-size: 2em;
+  color: #36f9a6;
+  margin-bottom: 1em;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 2em;
+}
+
+.service {
+  background: #1c2331;
+  border-radius: 12px;
+  padding: 2em 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 8px rgba(54,249,166,0.05);
+}
+
+.service h3 {
+  color: #36f9a6;
+  font-size: 1.3em;
+  margin-bottom: 0.6em;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 16px;
+  margin-top: 2em;
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 1em;
+  border-radius: 6px;
+  border: none;
+  background: #2c313d;
+  color: #f4f4f4;
+  font-size: 1em;
+}
+
+button {
+  background: #36f9a6;
+  color: #161b22;
+  border: none;
+  padding: 1em;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1c2331;
+  color: #36f9a6;
+}
+
+.form-status {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+footer {
+  background: #161b22;
+  color: #36f9a6;
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 4em;
+  font-size: 1em;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 1em;
+  }
+  .hero {
+    padding: 5em 1em 3em;
+  }
+  section {
+    padding: 2em 1em;
+  }
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
