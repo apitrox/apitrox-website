@@ -1,3 +1,3 @@
 # apitrox-website
 Apitrox.com website
-A business solutions company
+An AI business solutions company
