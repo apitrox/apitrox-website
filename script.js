@@ -3,6 +3,6 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   // Demo only: show status message.
   const statusDiv = document.getElementById("form-status");
   statusDiv.textContent = "Thank you for reaching out! We'll get back to you soon.";
-  statusDiv.style.color = "#36f9a6";
+  statusDiv.style.color = "#36f9a6"; // Green from logo
   this.reset();
 });
