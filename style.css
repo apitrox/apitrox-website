@@ -1,72 +1,96 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #101820;
-  color: #f4f4f4;
+  background: #ffffff;
+  color: #2c313d;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #161b22;
+  background: #f8f9fa;
   padding: 1em 2em;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
   font-size: 1.6em;
   font-weight: bold;
-  color: #36f9a6;
+  color: #0066ff;
   letter-spacing: 2px;
 }
 
 nav a {
-  color: #f4f4f4;
+  color: #2c313d;
   text-decoration: none;
   margin-left: 2em;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  padding: 0.5em 1em;
+  border-radius: 5px;
 }
 
 nav a:hover {
-  color: #36f9a6;
+  color: #0066ff;
+  background: rgba(0, 102, 255, 0.1);
 }
 
 .hero {
   text-align: center;
   padding: 7em 2em 5em;
-  background: linear-gradient(135deg,#36f9a6 0%,#1c2331 100%);
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230066ff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  z-index: 0;
 }
 
 .hero h1 {
   font-size: 2.6em;
   margin-bottom: 0.4em;
+  color: #1a1a1a;
+  position: relative;
+  z-index: 1;
 }
 
 .hero p {
   font-size: 1.3em;
   margin-bottom: 1.5em;
-  color: #101820;
+  color: #4a4a4a;
+  position: relative;
+  z-index: 1;
 }
 
 .cta-btn {
-  background: #161b22;
-  color: #36f9a6;
+  background: #0066ff;
+  color: white;
   padding: 0.8em 2em;
   font-size: 1.1em;
   border-radius: 50px;
   border: none;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
 }
 
 .cta-btn:hover {
-  background: #36f9a6;
-  color: #161b22;
+  background: #0052cc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.3);
 }
 
 section {
@@ -77,8 +101,9 @@ section {
 
 .services h2, .about h2, .contact h2 {
   font-size: 2em;
-  color: #36f9a6;
+  color: #0066ff;
   margin-bottom: 1em;
+  text-align: center;
 }
 
 .service-list {
@@ -88,15 +113,22 @@ section {
 }
 
 .service {
-  background: #1c2331;
+  background: white;
   border-radius: 12px;
-  padding: 2em 1em;
+  padding: 2em 1.5em;
   margin-bottom: 1em;
-  box-shadow: 0 2px 8px rgba(54,249,166,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,102,255,0.1);
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .service h3 {
-  color: #36f9a6;
+  color: #0066ff;
   font-size: 1.3em;
   margin-bottom: 0.6em;
 }
@@ -119,28 +151,37 @@ form {
 
 input, textarea {
   padding: 1em;
-  border-radius: 6px;
-  border: none;
-  background: #2c313d;
-  color: #f4f4f4;
+  border-radius: 8px;
+  border: 2px solid #e6e6e6;
+  background: white;
+  color: #2c313d;
   font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
 }
 
 button {
-  background: #36f9a6;
-  color: #161b22;
+  background: #0066ff;
+  color: white;
   border: none;
   padding: 1em;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1.1em;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,102,255,0.2);
 }
 
 button:hover {
-  background: #1c2331;
-  color: #36f9a6;
+  background: #0052cc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,102,255,0.3);
 }
 
 .form-status {
@@ -149,12 +190,13 @@ button:hover {
 }
 
 footer {
-  background: #161b22;
-  color: #36f9a6;
+  background: #f8f9fa;
+  color: #0066ff;
   text-align: center;
   padding: 2em 0;
   margin-top: 4em;
   font-size: 1em;
+  border-top: 1px solid rgba(0,102,255,0.1);
 }
 
 @media (max-width: 600px) {
